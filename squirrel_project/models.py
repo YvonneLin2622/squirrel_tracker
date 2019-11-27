@@ -44,7 +44,7 @@ class Squirrel(models.Model):
             max_length=8,
             )
 
-    combination_of_primary_and = models.CharField(
+    combination_of_primary_and_highlight_color = models.CharField(
             max_length=100,
             )
 
@@ -56,7 +56,7 @@ class Squirrel(models.Model):
             max_length=100,
             )
 
-    above_ground_sighter = models.CharField(
+    above_ground_sighter_measurement = models.CharField(
             max_length=100,
             )
 
@@ -98,7 +98,15 @@ class Squirrel(models.Model):
             max_length=200,
             )
     
-    geocoded_column = models.CharField(
+    lat_long = models.CharField(
             max_length=500,
             )
+    zip_codes = models.CharField(
+            max_length=5,
+            blank=True, null=True,
+            )
+    community_districts = models.IntegerField(blank=True, null=True)
+    borough_boundaries = models.IntegerField(blank=True, null=True)
+    city_council_districts = models.IntegerField(blank=True, null=True)
+    police_precincts = models.IntegerField(blank=True, null=True)
 
