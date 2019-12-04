@@ -110,7 +110,7 @@ class Squirrel(models.Model):
             )
     zip_codes = models.CharField(
             max_length=5,
-            blank=True, null=True,
+            blank=True, null=True
             )
     community_districts = models.IntegerField(blank=True, null=True)
     borough_boundaries = models.IntegerField(blank=True, null=True)
