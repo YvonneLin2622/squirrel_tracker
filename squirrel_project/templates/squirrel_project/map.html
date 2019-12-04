@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <style>
+        #mapDiv {
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+<div id="mapDiv"></div>
+<script>
+    var url = "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    var leafletMap = L.map('mapDiv').setView([40.7829, -73.9654], 14);
+    L.tileLayer(url, {
+       attribution: '&copy; <a href=" ">OpenStreetMap</a > contributors'
+    }).addTo(leafletMap);
+    {% for foo in squirrelList %}
+        L.circle([{{ foo.y }}, {{ foo.x }}], {radius: 5}).addTo(leafletMap);
+    {% endfor %}
+</script>
+
+</body>
+</html>

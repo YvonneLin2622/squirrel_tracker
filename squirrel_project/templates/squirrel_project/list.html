@@ -1,0 +1,5 @@
+<ul>
+    {% for foo in squirrelList %}
+        <li><a href="/sightings/{{ foo.id }}/">{{ foo.unique_squirrel_id }}</a></li>
+    {% endfor %}
+</ul>
