@@ -18,8 +18,9 @@ def edit(request,unique_squirrel_id):
         form_obj = EditSquirrelForm(request.POST, instance=squirrel)
         if form_obj.is_valid():
             form_obj.save()
-            return redirect("/sightings")
-    form = EditSquirrelForm(instance=squirrel)
+            return redirect(f"/sightings/{unique_squirrel_id}")
+    else:
+        form = EditSquirrelForm(instance=squirrel)
     return render(request, 'squirrel_project/edit.html', {'form': form})
 
 def add(request):
