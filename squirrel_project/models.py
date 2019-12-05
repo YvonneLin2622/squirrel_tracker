@@ -42,35 +42,35 @@ class Squirrel(models.Model):
             max_length=100,
             )
 
-    running = models.BooleanField(blank=True, null=True,)
-    
-    chasing = models.BooleanField(blank=True, null=True,)
+    running = models.BooleanField()
 
-    climbing = models.BooleanField(blank=True, null=True,)
+    chasing = models.BooleanField()
 
-    eating = models.BooleanField(blank=True, null=True,)
+    climbing = models.BooleanField()
 
-    foraging = models.BooleanField(blank=True, null=True,)
+    eating = models.BooleanField()
+
+    foraging = models.BooleanField()
 
     other_activities = models.CharField(
             max_length=200,blank=True, null=True,
             )
 
-    kuks = models.BooleanField(blank=True, null=True,)
+    kuks = models.BooleanField()
 
-    quaas = models.BooleanField(blank=True, null=True,)
+    quaas = models.BooleanField()
 
-    moans = models.BooleanField(blank=True, null=True,)
+    moans = models.BooleanField()
 
-    tail_flags = models.BooleanField(blank=True, null=True,)
+    tail_flags = models.BooleanField()
 
-    tail_twitches = models.BooleanField(blank=True, null=True,)
+    tail_twitches = models.BooleanField()
 
-    approaches = models.BooleanField(blank=True, null=True,)
+    approaches = models.BooleanField()
 
-    indifferent = models.BooleanField(blank=True, null=True,)
+    indifferent = models.BooleanField()
 
-    runs_from = models.BooleanField(blank=True, null=True,)
-
+    runs_from = models.BooleanField()
+    
     def __str__(self):
         return self.unique_squirrel_id
