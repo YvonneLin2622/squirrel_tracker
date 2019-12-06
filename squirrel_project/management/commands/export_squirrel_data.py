@@ -9,12 +9,12 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('args', type=str, nargs='+', help='Indicates file path.')
 
-    def handle(self, *args. **kwargs):
+    def handle(self, *args, **kwargs):
         filepath = args[0]
         fields = Squirrel._meta.fields
         with open(filepath, 'w') as csvfile:
             writer = csv.writer(csvfile)
-            for obj in Squirrel.ojects.all():
+            for obj in Squirrel.objects.all():
                 row = []
                 for field in fields:
                     row.append(getattr(obj, field.name))
