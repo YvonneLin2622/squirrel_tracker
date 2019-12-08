@@ -1,10 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Squirrel
-<<<<<<< HEAD
 from .forms import SquirrelForm,EditSquirrelForm
-=======
 from django.http import HttpResponse
->>>>>>> 82b12596bdf6d7c2207a78c59ead0cc530f829b1
 
 def map(request):
     squirrelList=Squirrel.objects.all()
@@ -15,7 +12,6 @@ def list(request):
     squirrelList=Squirrel.objects.all()
     return render(request, 'squirrel_project/list.html', locals())
 
-<<<<<<< HEAD
 
 def edit(request,unique_squirrel_id):
     squirrel=Squirrel.objects.filter(unique_squirrel_id=unique_squirrel_id).first()
@@ -28,6 +24,7 @@ def edit(request,unique_squirrel_id):
         form = EditSquirrelForm(instance=squirrel)
     return render(request, 'squirrel_project/edit.html', {'form': form})
 
+
 def add(request):
     if request.method == "POST":
         form = SquirrelForm(request.POST)
@@ -37,7 +34,7 @@ def add(request):
     form = SquirrelForm()
     return render(request, 'squirrel_project/add.html', {'form': form})
 
-=======
+
 def squirrel_stats(request):
     squirrelList=Squirrel.objects.all()
     total_num = len(squirrelList)
@@ -65,4 +62,4 @@ def squirrel_stats(request):
         {foraging_num} foraging\n\
     """
     return HttpResponse(response_text,content_type="text/plain")
->>>>>>> 82b12596bdf6d7c2207a78c59ead0cc530f829b1
+
