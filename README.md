@@ -13,14 +13,34 @@ The app has customized management commands to allow users to import and export s
    
 ### App Features
 - Views
-  - General Statistics of Squirrel Data
-    - Located at /sightings/stats
-    - Statistics displayed:
-      - Totoal Number of Squirrels in the sightings
-      - Center of the Map
-      - Total Number of Adult Squirrels
-      - Total Number of Juvenile Squirrels
-      - How many squirrels are running, chasing, climbing, eating or foraging
+* map function
+  + Description: A view that shows a map that displays the location of the squirrel sightings on an OpenStreets map.
+  + Location: /map
+  + Usage: This function uses the [leaflet library](https://leafletjs.com/) for plotting locations of squirrels.
+
+* list function
+  + Description: A view that lists all squirrel sightings with links to edit and add sightings.
+  + Location: /sightings
+
+* edit function
+  + Description: A view to update a particular sighting.
+  + Location: /sightings/unique-squirrel-id
+  + Usage: Users can update the statistics of a squirrel sighting on the page and click the ‘edit’ button.
+
+* add function
+  + Description: A view to create a new sighting
+  + Location: /sightings/add
+  + Usage: Users can enter new statistics and click the ‘add’ button to create the new squirrel sighting.
+  
+* squirrel_stats function
+  + Description: A view with general statistics about the squirrel sightings
+  + Location: /sightings/stats
+  + Statistics displayed:
+    + Totoal Number of Squirrels in the sightings
+    + Center of the Map
+    + Total Number of Adult Squirrels
+    + Total Number of Juvenile Squirrels
+    + How many squirrels are running, chasing, climbing, eating or foraging
 
 
 ## Project Group
