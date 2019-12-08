@@ -61,5 +61,5 @@ def squirrel_stats(request):
         {eating_num} eating\n\
         {foraging_num} foraging\n\
     """
-    return HttpResponse(response_text,content_type="text/plain")
+    return HttpResponse(response_text, content_type="text/plain")
 
