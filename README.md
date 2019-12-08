@@ -48,7 +48,7 @@ The app has customized management commands to allow users to import and export s
 - UNIs: [ll3367, zm2335]
 
 ## Server Link
-
+https://f2019sec1.appspot.com
 
     
  
