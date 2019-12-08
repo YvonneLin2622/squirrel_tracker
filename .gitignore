@@ -1,38 +1,10 @@
-__pycache__/
-*.py[cod]
-*$py.class
-
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+#Pycache Files
+*/__pycache__/*
+squirrel_project/__pycache__/*
+squirrel_project/management/commands/__pycache__/*
+squirrel_project/migrations/__pycache__/*
+squirrel/__pycache__/*
+*/collected-static/*
