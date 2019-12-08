@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Squirrel
-from .forms import SquirrelForm,EditSquirrelForm
+from .forms import SquirrelForm
 from django.http import HttpResponse
 
 def map(request):
@@ -20,8 +20,7 @@ def edit(request,unique_squirrel_id):
         if form_obj.is_valid():
             form_obj.save()
             return redirect(f"/sightings/{unique_squirrel_id}")
-    else:
-        form = EditSquirrelForm(instance=squirrel)
+    form = SquirrelForm(instance=squirrel)
     return render(request, 'squirrel_project/edit.html', {'form': form})
 
 
